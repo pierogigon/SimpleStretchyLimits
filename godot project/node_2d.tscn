@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dq5g07n1ui3bn"]
+
+[ext_resource type="Texture2D" uid="uid://cg6mtu3esmhs2" path="res://attachment point.png" id="1_jle7v"]
+[ext_resource type="Script" path="res://AttachedObject.gd" id="2_6l1we"]
+[ext_resource type="Texture2D" uid="uid://bggmbtri3yrrb" path="res://attached object.png" id="3_yr36o"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3ykqr"]
+radius = 21.0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AttachmentPoint" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(661, 344)
+scale = Vector2(0.336308, 0.336308)
+texture = ExtResource("1_jle7v")
+
+[node name="AttachedObject" type="RigidBody2D" parent="."]
+position = Vector2(848, 336)
+gravity_scale = 0.0
+script = ExtResource("2_6l1we")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttachedObject"]
+shape = SubResource("CircleShape2D_3ykqr")
+
+[node name="Sprite2D" type="Sprite2D" parent="AttachedObject"]
+scale = Vector2(0.21, 0.21)
+texture = ExtResource("3_yr36o")
