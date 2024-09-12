@@ -11,13 +11,12 @@ radius = 21.0
 
 [node name="AttachmentPoint" type="Sprite2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(661, 344)
+position = Vector2(970.446, 333.446)
 scale = Vector2(0.336308, 0.336308)
 texture = ExtResource("1_jle7v")
 
 [node name="AttachedObject" type="RigidBody2D" parent="."]
-position = Vector2(848, 336)
-gravity_scale = 0.0
+position = Vector2(1157.45, 325.446)
 script = ExtResource("2_6l1we")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttachedObject"]
