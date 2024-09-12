@@ -4,24 +4,25 @@
 [ext_resource type="Script" path="res://AttachedObject.gd" id="2_6l1we"]
 [ext_resource type="Texture2D" uid="uid://bggmbtri3yrrb" path="res://attached object.png" id="3_yr36o"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_3ykqr"]
-radius = 21.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_furh5"]
+radius = 20.0
 
 [node name="Node2D" type="Node2D"]
 
 [node name="AttachmentPoint" type="Sprite2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(970.446, 333.446)
+position = Vector2(468.446, 315.446)
 scale = Vector2(0.336308, 0.336308)
 texture = ExtResource("1_jle7v")
 
 [node name="AttachedObject" type="RigidBody2D" parent="."]
-position = Vector2(1157.45, 325.446)
+position = Vector2(655.45, 307.446)
 script = ExtResource("2_6l1we")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AttachedObject"]
-shape = SubResource("CircleShape2D_3ykqr")
 
 [node name="Sprite2D" type="Sprite2D" parent="AttachedObject"]
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("3_yr36o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttachedObject"]
+position = Vector2(0.550049, -1.44601)
+shape = SubResource("CircleShape2D_furh5")
